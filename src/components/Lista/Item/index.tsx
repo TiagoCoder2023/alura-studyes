@@ -15,8 +15,8 @@ function Item({tarefa,
   }: Props) {
     
     return(
-        <li className={`${style.item} ${selecionado ? style.itemSelecionado : ''}`} 
-        onClick={() => selecionaTarefa(
+        <li className={`${style.item} ${selecionado ? style.itemSelecionado : ''} ${completado ? style.itemCompletado : ''}`} 
+        onClick={() => !completado && selecionaTarefa(
             {
               tarefa,
               tempo,
